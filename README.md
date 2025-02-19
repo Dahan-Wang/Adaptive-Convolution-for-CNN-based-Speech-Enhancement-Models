@@ -1,1 +1,1 @@
-# Adaptive-Convolution-for-CNN-based-Speech-Enhancement-Models
+# Adaptive Convolution for CNN based Speech Enhancement Models
