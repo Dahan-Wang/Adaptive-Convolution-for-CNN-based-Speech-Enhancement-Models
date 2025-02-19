@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Samples: Adaptive Convolution for CNN-based Speech Enhancement Models</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 36px;
+    }
+
+    .sample {
+      margin-bottom: 40px;
+    }
+
+    .sample h2 {
+      color: #555;
+      font-size: 24px;
+    }
+
+    .audio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 20px;
+      grid-column-gap: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .audio-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      flex-grow: 1;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 250px;
+      margin: 0px 0;
+    }
+
+    .spectrogram {
+      margin-top: 2px;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .audio-item h3 {
+      font-size: 14px;
+      color: #333;
+      margin-top: 2px;
+      white-space: normal;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Audio Samples: <br>Adaptive Convolution for CNN-based Speech Enhancement Models</h1>
+
+  <!-- Sample 1 -->
+  <div class="sample">
+    <h2>Sample 1</h2>
+    <div class="audio-grid">
+      <!-- First row -->
+      <div class="audio-item">
+        <h3>Noisy</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_noisy.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_noisy.png" class="spectrogram" alt="Noisy Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>Clean</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_clean.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_clean.png" class="spectrogram" alt="Clean Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_light.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_light.png" class="spectrogram" alt="DPCRN_light Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_light_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_light_AdaptiveConv.png" class="spectrogram" alt="DPCRN_light + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Second row -->
+      <div class="audio-item">
+        <h3>DPCRN_middle</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_middle.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_middle.png" class="spectrogram" alt="DPCRN_middle Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_middle + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_middle_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_middle_AdaptiveConv.png" class="spectrogram" alt="DPCRN_middle + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_large.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_large.png" class="spectrogram" alt="DPCRN_large Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DPCRN_large_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DPCRN_large_AdaptiveConv.png" class="spectrogram" alt="DPCRN_large + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Third row -->
+      <div class="audio-item">
+        <h3>GTCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_GTCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_GTCRN.png" class="spectrogram" alt="GTCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>GTCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_GTCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_GTCRN_AdaptiveConv.png" class="spectrogram" alt="GTCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_LiSenNet.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_LiSenNet.png" class="spectrogram" alt="LiSenNet Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_LiSenNet_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_LiSenNet_AdaptiveConv.png" class="spectrogram" alt="LiSenNet + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Fourth row -->
+      <div class="audio-item">
+        <h3>DCCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DCCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DCCRN.png" class="spectrogram" alt="DCCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DCCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_DCCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_DCCRN_AdaptiveConv.png" class="spectrogram" alt="DCCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>AdaptCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample1_AdaptCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample1_AdaptCRN.png" class="spectrogram" alt="AdaptCRN Spectrogram">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample 2 -->
+  <div class="sample">
+    <h2>Sample 2</h2>
+    <div class="audio-grid">
+      <!-- First row -->
+      <div class="audio-item">
+        <h3>Noisy</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_noisy.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_noisy.png" class="spectrogram" alt="Noisy Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>Clean</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_clean.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_clean.png" class="spectrogram" alt="Clean Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_light.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_light.png" class="spectrogram" alt="DPCRN_light Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_light_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_light_AdaptiveConv.png" class="spectrogram" alt="DPCRN_light + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Second row -->
+      <div class="audio-item">
+        <h3>DPCRN_middle</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_middle.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_middle.png" class="spectrogram" alt="DPCRN_middle Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_middle + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_middle_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_middle_AdaptiveConv.png" class="spectrogram" alt="DPCRN_middle + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_large.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_large.png" class="spectrogram" alt="DPCRN_large Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DPCRN_large_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DPCRN_large_AdaptiveConv.png" class="spectrogram" alt="DPCRN_large + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Third row -->
+      <div class="audio-item">
+        <h3>GTCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_GTCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_GTCRN.png" class="spectrogram" alt="GTCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>GTCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_GTCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_GTCRN_AdaptiveConv.png" class="spectrogram" alt="GTCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_LiSenNet.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_LiSenNet.png" class="spectrogram" alt="LiSenNet Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_LiSenNet_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_LiSenNet_AdaptiveConv.png" class="spectrogram" alt="LiSenNet + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Fourth row -->
+      <div class="audio-item">
+        <h3>DCCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DCCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DCCRN.png" class="spectrogram" alt="DCCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DCCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_DCCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_DCCRN_AdaptiveConv.png" class="spectrogram" alt="DCCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>AdaptCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample2_AdaptCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample2_AdaptCRN.png" class="spectrogram" alt="AdaptCRN Spectrogram">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample 3 -->
+  <div class="sample">
+    <h2>Sample 3</h2>
+    <div class="audio-grid">
+      <!-- First row -->
+      <div class="audio-item">
+        <h3>Noisy</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_noisy.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_noisy.png" class="spectrogram" alt="Noisy Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>Clean</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_clean.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_clean.png" class="spectrogram" alt="Clean Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_light.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_light.png" class="spectrogram" alt="DPCRN_light Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_light + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_light_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_light_AdaptiveConv.png" class="spectrogram" alt="DPCRN_light + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Second row -->
+      <div class="audio-item">
+        <h3>DPCRN_middle</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_middle.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_middle.png" class="spectrogram" alt="DPCRN_middle Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_middle + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_middle_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_middle_AdaptiveConv.png" class="spectrogram" alt="DPCRN_middle + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_large.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_large.png" class="spectrogram" alt="DPCRN_large Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DPCRN_large + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DPCRN_large_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DPCRN_large_AdaptiveConv.png" class="spectrogram" alt="DPCRN_large + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Third row -->
+      <div class="audio-item">
+        <h3>GTCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_GTCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_GTCRN.png" class="spectrogram" alt="GTCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>GTCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_GTCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_GTCRN_AdaptiveConv.png" class="spectrogram" alt="GTCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_LiSenNet.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_LiSenNet.png" class="spectrogram" alt="LiSenNet Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>LiSenNet + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_LiSenNet_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_LiSenNet_AdaptiveConv.png" class="spectrogram" alt="LiSenNet + Adaptive convolution Spectrogram">
+      </div>
+      <!-- Fourth row -->
+      <div class="audio-item">
+        <h3>DCCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DCCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DCCRN.png" class="spectrogram" alt="DCCRN Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>DCCRN + Adaptive convolution</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_DCCRN_AdaptiveConv.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_DCCRN_AdaptiveConv.png" class="spectrogram" alt="DCCRN + Adaptive convolution Spectrogram">
+      </div>
+      <div class="audio-item">
+        <h3>AdaptCRN</h3>
+        <audio controls>
+          <source src="samples/audio/Sample3_AdaptCRN.wav" type="audio/wav">
+        </audio>
+        <img src="samples/spec/Sample3_AdaptCRN.png" class="spectrogram" alt="AdaptCRN Spectrogram">
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
